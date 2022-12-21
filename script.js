@@ -83,16 +83,16 @@ var programCode = function(processingInstance) {
             }
         };
         Pendulum.prototype.getEnd = function() {
-            return {
-                "x": this.x + this.length * cos(this.rot),
-                "y": this.y + this.length * sin(this.rot)
-            };
+            return new PVector(
+                this.x + this.length * cos(this.rot),
+                this.y + this.length * sin(this.rot)
+            );
         };
         Pendulum.prototype.move = function(distance) {
-            return {
-                "x": this.x + distance * cos(this.rot),
-                "y": this.y + distance * sin(this.rot)
-            };
+            return new PVector(
+                this.x + distance * cos(this.rot),
+                this.y + distance * sin(this.rot)
+            );
         };
         Pendulum.prototype.draw = function() {
             pushMatrix();
