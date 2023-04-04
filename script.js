@@ -127,9 +127,9 @@ var programCode = function(processingInstance) {
 
         var halfW = width / 2;
         var halfH = height / 2;
-        var pendulumLeft = new Pendulum(halfW - 35, halfH, 80, 10, 100);
-        var pendulumMiddle = new Pendulum(halfW, halfH, 85, 12, 80);
-        var pendulumRight = new Pendulum(halfW + 35, halfH, 83, 7, 17);
+        new Pendulum(halfW - 35, halfH, 80, 10, 100);
+        new Pendulum(halfW, halfH, 85, 12, 80);
+        new Pendulum(halfW + 35, halfH, 83, 7, 17);
 
         stroke(0);
         strokeWeight(2);
@@ -145,8 +145,8 @@ var programCode = function(processingInstance) {
 var canvas = document.getElementById("canvas");
 
 // create new ProcessingJS instance
-var processingInstance = new Processing(canvas, programCode);
+new Processing(canvas, programCode);
 
 canvas.onclick = function() {
     playing = true;
-}
+};
